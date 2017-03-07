@@ -18,16 +18,17 @@
 			}
 		</style>
 		<script type = "text/javascript">
-			var frame = document.getElementById("frame")
+		(function(){
 			function toPage(page) {
-				frame.setAttribute("src", page)	
+				document.getElementById("frame").setAttribute("src", page);
 			}
+		})()
 		</script>
 	</head>
 	<body>
 		<div class  = "lpanel">
 			<div>
-				<a href = "#", onclick = "toPage('home.html')"><h1>R</h1></a>
+				<a href = "#" onclick = "toPage('home.html')"><h1>R</h1></a>
 			</div>
 			<div>
 				<ul class = "menu">
