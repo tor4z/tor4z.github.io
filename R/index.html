@@ -1,1 +1,37 @@
-R index
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>R Archive</title>
+		<style type = "text/css">
+			.lpanel {
+				float: left;
+				width: 200px;
+			}
+			.rpanel {
+				float: right;
+				width: 900px;
+			}
+		</style>
+		<script type = "text/javascript">
+			var frame = document.getElementById("frame")
+			function toPage(page) {
+				frame.setAttribute("src", page)	
+			}
+		</script>
+	</head>
+	<body>
+		<div class  = "lpanel">
+			<div>
+				<a href = "#", onclick = "toPage('home.html')"><h1>R</h1></a>
+			</div>
+			<div>
+				<ul class = "menu">
+					<li><a href = "#" onclick = "toPage('dplyrTrain.html')">dplyr example</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class = "rpanel">
+			<iframe id = "frame" src = "pages/home.html"></iframe>
+		</div>
+	</body>
+</html>
