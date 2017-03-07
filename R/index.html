@@ -3,16 +3,22 @@
 	<head>
 		<title>R Archive</title>
 		<style type = "text/css">
+			.main {
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+			}
 			.lpanel {
 				float: left;
 				width: 200px;
-				height: 1200px;
+				height: 100%;
 				border-right: 1px solid #233;
 			}
 			.rpanel {
 				float: left;
 				width: 900px;
-				height: 1200px;
+				height: 100%;
 			}
 			#frame {
 				border-style: none;
@@ -27,18 +33,20 @@
 		</script>
 	</head>
 	<body>
-		<div class  = "lpanel">
-			<div>
-				<a href = "#" onclick = "toPage('home.html')"><h1>R</h1></a>
+		<div class = "main">
+			<div class  = "lpanel">
+				<div>
+					<a href = "#" onclick = "toPage('home.html')"><h1>R</h1></a>
+				</div>
+				<div>
+					<ul class = "menu">
+						<li><a href = "#" onclick = "toPage('dplyrTrain.html')">dplyr example</a></li>
+					</ul>
+				</div>
 			</div>
-			<div>
-				<ul class = "menu">
-					<li><a href = "#" onclick = "toPage('dplyrTrain.html')">dplyr example</a></li>
-				</ul>
+			<div class = "rpanel">
+				<iframe id = "frame" src = "pages/home.html"></iframe>
 			</div>
-		</div>
-		<div class = "rpanel">
-			<iframe id = "frame" src = "pages/home.html"></iframe>
 		</div>
 	</body>
 </html>
